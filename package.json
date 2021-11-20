@@ -1,0 +1,15 @@
+{
+  "name": "testcafe-e2e-tests",
+  "version": "1.0.0",
+  "description": "testcafe e2e tests ",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx testcafe chrome tests/smoke"
+  },
+  "author": "Sanjeev Kumar",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "testcafe": "^1.17.1"
+  }
+}
