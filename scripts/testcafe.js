@@ -40,7 +40,8 @@ async function runTest() {
         })
         .then(failed => {
             console.log(failed + " Tests failed");
-            return testcafe.close();
+            testcafe.close();
+            process.exit(failed);
         });
 };
 
