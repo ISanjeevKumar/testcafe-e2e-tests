@@ -12,7 +12,7 @@ This project is to demonstrate end to end automation testing for JuiceShop appli
  ## Running the tests
 
 ```
-npm run test
+npm run chrome:run
 ```
 
 ## Authors
