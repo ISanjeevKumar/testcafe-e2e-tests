@@ -1,7 +1,8 @@
 import juiceshopApp from "../../page_objects/juiceshop-app";
+import { BASE_URL } from "../../environment/environment"
 
 fixture`Login test`
-    .page`http://localhost:3000/`
+    .page(BASE_URL)
 
 test('should not be able to login with invalid credentials', async t => {
 

@@ -4,11 +4,16 @@
   "description": "testcafe e2e tests ",
   "main": "index.js",
   "scripts": {
-    "test": "npx testcafe chrome tests/smoke"
+    "chrome:debug:local": "ENVIRONMENT=local testcafe chrome tests/smoke --debug-on-fail",
+    "chrome:run:local": "ENVIRONMENT=local node scripts/testcafe.js -b chrome -t 'tests/smoke'",
+    "chrome:run:prod": "ENVIRONMENT=prod node scripts/testcafe.js -b chrome -t 'tests/smoke'",
+    "chrome:run:headless": "node scripts/testcafe.js -b chrome:headless -t 'tests/smoke'"
   },
   "author": "Sanjeev Kumar",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "yargs": "^17.2.1"
+  },
   "devDependencies": {
     "testcafe": "^1.17.1"
   }
