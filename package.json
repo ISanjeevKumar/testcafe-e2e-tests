@@ -8,7 +8,7 @@
     "iphone:run:local": "ENVIRONMENT=local testcafe chrome:emulation:device=ipad pro tests/smoke",
     "chrome:debug:local": "ENVIRONMENT=local testcafe chrome tests/smoke --debug-on-fail",
     "chrome:run:local": "ENVIRONMENT=local node scripts/testcafe.js -b chrome -t 'tests/smoke' xunit:result.xml",
-    "chrome:run": "ENVIRONMENT=prod node scripts/testcafe.js -b chrome -t 'tests/smoke' xunit:result.xml",
+    "chrome:run": "node scripts/testcafe.js -b chrome -t 'tests/smoke' xunit:result.xml",
     "chrome:run:headless": "node scripts/testcafe.js -b chrome:headless -t 'tests/smoke' xunit:result.xml"
   },
   "author": "Sanjeev Kumar",
