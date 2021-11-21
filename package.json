@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "chrome:debug:local": "ENVIRONMENT=local testcafe chrome tests/smoke --debug-on-fail",
-    "chrome:run:local": "ENVIRONMENT=local node scripts/testcafe.js -b chrome -t 'tests/smoke'",
-    "chrome:run:prod": "ENVIRONMENT=prod node scripts/testcafe.js -b chrome -t 'tests/smoke'",
-    "chrome:run:headless": "node scripts/testcafe.js -b chrome:headless -t 'tests/smoke'"
+    "chrome:run:local": "ENVIRONMENT=local node scripts/testcafe.js -b chrome -t 'tests/smoke' xunit:result.xml",
+    "chrome:run:prod": "ENVIRONMENT=prod node scripts/testcafe.js -b chrome -t 'tests/smoke' xunit:result.xml",
+    "chrome:run:headless": "node scripts/testcafe.js -b chrome:headless -t 'tests/smoke' xunit:result.xml"
   },
   "author": "Sanjeev Kumar",
   "license": "ISC",
   "dependencies": {
+    "faker": "^5.5.3",
+    "fs-extra": "^10.0.0",
+    "testcafe-reporter-xunit": "^2.1.0",
     "yargs": "^17.2.1"
   },
   "devDependencies": {
